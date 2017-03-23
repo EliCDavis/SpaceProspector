@@ -6,7 +6,7 @@ namespace EliCDavis.Enemy {
 	/// <summary>
 	/// Potiential Field Code ripped frome drone behavior from Project Lydia!
 	/// </summary>
-	public class HornetBehavior : MonoBehaviour {
+	public class HornetBehavior : EliCDavis.Util.Destructable {
 
 		[SerializeField]
 		private Transform target;

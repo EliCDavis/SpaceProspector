@@ -23,8 +23,17 @@ namespace EliCDavis.Player
 		}
 	
 		// Update is called once per frame
-		void OnCollisionEnter ()
+		void OnCollisionEnter (Collision collision)
 		{
+			EliCDavis.Util.Destructable destroyable = collision.gameObject.GetComponent<EliCDavis.Util.Destructable>();
+
+			if (destroyable != null) {
+				destroyable.Damage (.1f);
+				print ("Destroyable not null: "+collision.transform.name);
+			} else {
+				print ("Destroyable null: "+collision.transform.name);
+			}
+
 			Die ();
 		}
 

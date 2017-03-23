@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Asteroid_A
+  m_Name: Asteroid_A Ore
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _DETAIL_MULX2 _EMISSION _NORMALMAP
   m_LightmapFlags: 1
@@ -90,13 +90,13 @@ Material:
       second: 1
     - first:
         name: _Glossiness
-      second: 0.4
+      second: 0.713
     - first:
         name: _GlossyReflections
       second: 1
     - first:
         name: _Metallic
-      second: 0
+      second: 0.272
     - first:
         name: _Mode
       second: 0
@@ -124,10 +124,10 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+      second: {r: 0.5441177, g: 0.4652041, b: 0.024005182, a: 1}
     - first:
         name: _EmissionColor
-      second: {r: 0, g: 0, b: 0, a: 0}
+      second: {r: 0.10289047, g: 0.125, b: 0.024816178, a: 0}
     - first:
         name: _EmissionColorUI
       second: {r: 1, g: 1, b: 1, a: 1}
