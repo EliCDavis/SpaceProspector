@@ -16,3 +16,4 @@ Play as a space miner where you shoot at asteroids to harvest their materials.  
 * [Main Menu Music](https://www.youtube.com/watch?v=MduJjbcLSqE)
 * [Metal Music](https://www.assetstore.unity3d.com/en/#!/content/19233)
 * [Projectile Shoot](http://www.freesound.org/data/previews/193/193427_1038806-lq.mp3)
+* [Damaged Sound](http://www.freesound.org/people/Udderdude/sounds/257569/)

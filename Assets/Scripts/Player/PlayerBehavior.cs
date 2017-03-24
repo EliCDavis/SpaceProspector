@@ -17,7 +17,7 @@ namespace EliCDavis.Player
 
 		private float pitchSpeed = 75f;
 
-		private int goldLeftToCollect = 3;
+		private int goldLeftToCollect = 10;
 
 		private Rigidbody rb;
 
@@ -60,6 +60,12 @@ namespace EliCDavis.Player
 
 		[SerializeField]
 		private GameObject camera;
+
+		[SerializeField]
+		private Text countDisplay;
+
+		[SerializeField]
+		private AudioSource caChingSFX;
 
 		// Use this for initialization
 		void Start ()
@@ -145,6 +151,9 @@ namespace EliCDavis.Player
 				Destroy (collision.gameObject);
 				if (goldLeftToCollect == 0) {
 					UnityEngine.SceneManagement.SceneManager.LoadScene (2);
+				} else {
+					countDisplay.text = goldLeftToCollect + " Left";
+					caChingSFX.Play ();
 				}
 			} else {
 				rb.AddForce ((transform.forward - collision.collider.transform.position).normalized * -200, ForceMode.Impulse);
