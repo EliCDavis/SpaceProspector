@@ -21,8 +21,10 @@ namespace EliCDavis.Util {
 		/// <param name="amount">Amount.</param>
 		public void Damage(float amount) {
 			health = Mathf.Max (0, health - amount);
-			if(health == 0){
+			if (health == 0) {
 				Die ();
+			} else {
+				OnDamage ();
 			}
 		}
 
@@ -42,6 +44,11 @@ namespace EliCDavis.Util {
 		/// Used to be overriden in parent classes
 		/// </summary>
 		protected virtual void OnDeath() {}
+
+		/// <summary>
+		/// Raises the damage event.
+		/// </summary>
+		protected virtual void OnDamage() {}
 
 	}
 

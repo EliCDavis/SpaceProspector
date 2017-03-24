@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using EliCDavis.Collectable;
 
 namespace EliCDavis.Player
 {
@@ -118,6 +119,13 @@ namespace EliCDavis.Player
 		}
 
 
+		void OnTriggerEnter(Collider other) {
+
+
+
+		}
+
+
 		private float CurrentBoostSpeed() {
 			return Input.GetKey (KeyCode.LeftShift)? 2f : 1f;
 		}
@@ -128,7 +136,16 @@ namespace EliCDavis.Player
 
 		void OnCollisionEnter (Collision collision)
 		{
-			rb.AddForce ((transform.forward - collision.collider.transform.position).normalized * -100, ForceMode.Impulse);
+
+			CollectableBehavior collectable = collision.gameObject.GetComponent<CollectableBehavior> ();
+
+			if (collectable != null) {
+				print ("I just ate: " + collectable.GetCollectableType ().ToString ());
+				Destroy (collision.gameObject);
+			} else {
+				rb.AddForce ((transform.forward - collision.collider.transform.position).normalized * -200, ForceMode.Impulse);
+			}
+
 		}
 
 

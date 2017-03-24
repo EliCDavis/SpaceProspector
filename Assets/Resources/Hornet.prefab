@@ -213,13 +213,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  deathEffect: {fileID: 0}
+  deathEffect: {fileID: 1220844294986302, guid: 38201c66e59c28e4fa271985acb8ba67,
+    type: 2}
   deathEffectDuration: 0.95
   target: {fileID: 0}
   speed: 35
-  explosionEffect: {fileID: 1220844294986302, guid: 38201c66e59c28e4fa271985acb8ba67,
-    type: 2}
-  effectDuration: 0.95
   damageToDeal: 0.15
 --- !u!198 &198326740048696642
 ParticleSystem:
@@ -229,7 +227,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1770441686412068}
   serializedVersion: 5
   lengthInSec: 5
-  speed: 1
+  simulationSpeed: 1
   looping: 1
   prewarm: 0
   playOnAwake: 1
@@ -2872,7 +2870,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1303121281662596}
   serializedVersion: 5
   lengthInSec: 5
-  speed: 1
+  simulationSpeed: 1
   looping: 1
   prewarm: 0
   playOnAwake: 1

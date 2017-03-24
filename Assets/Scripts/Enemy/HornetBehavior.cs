@@ -15,12 +15,6 @@ namespace EliCDavis.Enemy {
 		private float speed = 35f;
 
 		[SerializeField]
-		private GameObject explosionEffect;
-
-		[SerializeField]
-		private float effectDuration;
-
-		[SerializeField]
 		private float damageToDeal = .15f;
 
 		private float targetAttractiveForce = 5;
@@ -29,9 +23,6 @@ namespace EliCDavis.Enemy {
 			this.target = target.transform;
 		}
 
-		// Use this for initialization
-		void Start () {
-		}
 		
 		float GetDistance(Vector3 dir) {
 			Debug.DrawRay (transform.position, dir*3);
@@ -92,11 +83,6 @@ namespace EliCDavis.Enemy {
 			}
 
 			Die ();
-		}
-
-		private void Die() {
-			Destroy (Instantiate (explosionEffect, transform.position, transform.rotation), effectDuration);
-			Destroy (gameObject);
 		}
 
 	}
