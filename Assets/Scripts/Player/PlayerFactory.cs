@@ -14,9 +14,10 @@ namespace EliCDavis.Player {
 			return playerReference;
 		}
 
-
 		public static GameObject CreatePlayer(Vector3 position) {
-			return GameObject.Instantiate (GetPlayerReference(), position, Quaternion.identity);
+			GameObject instance = GameObject.Instantiate (GetPlayerReference(), position, Quaternion.identity);
+			PlayerManager.GetInstance ().SetPlayer (instance.GetComponent<PlayerBehavior>());
+			return instance;
 		}
 	}
 

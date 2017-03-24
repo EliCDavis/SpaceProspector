@@ -23,8 +23,38 @@ namespace EliCDavis.Scenes.Mining
 			return floatyAsteroidReference;
 		}
 
-		public static GameObject CreateAsteroid(Vector3 position, Quaternion rotation, bool withOres) {
-			return GameObject.Instantiate (withOres? GetAsteroidReference() : GetFloatyAsteroidReference(), position, rotation);
+		private static GameObject nestReference = null;
+		private static GameObject GetNestReference() {
+			if (nestReference == null) {
+				nestReference = Resources.Load <GameObject>("Wasp Nest");
+			}
+			return nestReference;
+		}
+
+		public static GameObject CreateAsteroid(Vector3 position, Quaternion rotation, AsteroidType typeOfAsteroid) {
+			GameObject reference = null;
+
+			switch (typeOfAsteroid) {
+
+			case AsteroidType.Ore:
+				reference = GetAsteroidReference ();
+				break;
+
+			case AsteroidType.Regular:
+				reference = GetFloatyAsteroidReference();
+				break;
+
+			case AsteroidType.Nest:
+				reference = GetNestReference ();
+				break;
+
+			default:
+				reference = GetFloatyAsteroidReference ();
+				break;
+
+			}
+
+			return GameObject.Instantiate (reference, position, rotation);
 		}
 
 	}

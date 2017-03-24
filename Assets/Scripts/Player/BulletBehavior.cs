@@ -29,9 +29,6 @@ namespace EliCDavis.Player
 
 			if (destroyable != null) {
 				destroyable.Damage (.1f);
-				print ("Destroyable not null: "+collision.transform.name);
-			} else {
-				print ("Destroyable null: "+collision.transform.name);
 			}
 
 			Die ();

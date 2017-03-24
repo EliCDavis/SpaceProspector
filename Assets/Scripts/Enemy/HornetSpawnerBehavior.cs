@@ -17,24 +17,30 @@ namespace EliCDavis.Enemy
 		[SerializeField]
 		private GameObject target;
 
-		// Use this for initialization
-		void Start ()
+		private bool currentlySpawning;
+
+		void Start()
 		{
-			StartCoroutine (StartSpawning());
+			currentlySpawning = false;
 		}
-	
-		// Update is called once per frame
-		void Update ()
+
+		public void BeginSpawning (GameObject target, float spawnRate)
 		{
-		
+			this.target = target;
+			this.spawnRate = spawnRate;
+			if (!currentlySpawning) {
+				StartCoroutine (StartSpawning());
+			}
 		}
 
 		private IEnumerator StartSpawning(){
-			while (target != null) {
-				yield return new WaitForSeconds (spawnRate);
+			currentlySpawning = true;
+			while (target != null && Vector3.Distance(transform.position, target.transform.position) < 800) {
 				GameObject hornetInstance = Instantiate (hornet, transform.position + (transform.forward * 4), transform.rotation);
 				hornetInstance.GetComponent<HornetBehavior> ().SetTarget (target);
+				yield return new WaitForSeconds (spawnRate);
 			}
+			currentlySpawning = false;
 		}
 
 	}

@@ -11,7 +11,7 @@ namespace EliCDavis.Scenes.Mining {
 		// Use this for initialization
 		void Start () {
 			PlayerFactory.CreatePlayer (Vector3.zero);
-			GenerateAsteroids (20);
+			GenerateAsteroids (15);
 		}
 		
 		// Update is called once per frame
@@ -19,19 +19,19 @@ namespace EliCDavis.Scenes.Mining {
 			
 		}
 
-		private float RandomAngle(){
-			return Random.Range (0f, Mathf.PI * 2);
-		}
-
 		private void GenerateAsteroids(int layers) {
 
 			for(int layer = 1; layer < layers + 1; layer++){
 
-				int numOfAsteroids = Random.Range (25, 25 + (layer * 2 * layer));
+				int numOfAsteroids = Random.Range (25, 25 + (int)(layer * layer*.8f));
 
 				for (int asteroid = 0; asteroid < numOfAsteroids; asteroid++) {
 
-					bool ore = Random.Range (0f, 1f) > .6f;
+					AsteroidType asteroidType = AsteroidType.Ore;
+					float decision = Random.Range (0f, 1f);
+					if(decision> .4f){
+						asteroidType = decision > .9f ? AsteroidType.Regular: AsteroidType.Nest;
+					}
 
 					GameObject ast = AsteroidFactory.CreateAsteroid (
 						Random.onUnitSphere*(layer*200), 
@@ -40,10 +40,10 @@ namespace EliCDavis.Scenes.Mining {
 							Random.Range(0, 180),
 							Random.Range(0, 180)
 						), 
-						ore
+						asteroidType
 					);
 
-					if (!ore) {
+					if (asteroidType != AsteroidType.Ore) {
 						ast.GetComponent<Rigidbody> ().AddTorque (Random.onUnitSphere*2000, ForceMode.Impulse);
 					}
 

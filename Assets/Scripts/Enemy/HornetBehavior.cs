@@ -23,6 +23,9 @@ namespace EliCDavis.Enemy {
 			this.target = target.transform;
 		}
 
+		void Start(){
+			Destroy (gameObject, 30f);
+		}
 		
 		float GetDistance(Vector3 dir) {
 			Debug.DrawRay (transform.position, dir*3);

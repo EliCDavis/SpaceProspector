@@ -135,6 +135,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4103896542311326}
+  - component: {fileID: 114397342354923996}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Untagged
@@ -338,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c3ac7ef7a1bf945a77901dedf2db52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chanceForSpawningOre: 0.374
+  chanceForSpawningOre: 0.195
 --- !u!114 &114240594576764220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -350,7 +351,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c3ac7ef7a1bf945a77901dedf2db52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chanceForSpawningOre: 0.374
+  chanceForSpawningOre: 0.195
+--- !u!114 &114397342354923996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1747804738071030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3be6197e56a23b40a90baf2a24d646a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bobSpeed: 0.1
+  bobHeight: 10
+  bobOffset: 0
+  PrimaryRot: 4
+  SecondaryRot: 2
+  TertiaryRot: 1
 --- !u!114 &114456530910922442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -362,7 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c3ac7ef7a1bf945a77901dedf2db52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chanceForSpawningOre: 0.374
+  chanceForSpawningOre: 0.195
 --- !u!114 &114483502027697540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -374,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c3ac7ef7a1bf945a77901dedf2db52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chanceForSpawningOre: 0.374
+  chanceForSpawningOre: 0.195
 --- !u!114 &114525389402789926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -386,7 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c3ac7ef7a1bf945a77901dedf2db52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chanceForSpawningOre: 0.374
+  chanceForSpawningOre: 0.195
 --- !u!136 &136661566456053502
 CapsuleCollider:
   m_ObjectHideFlags: 1
