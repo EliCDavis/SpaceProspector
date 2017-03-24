@@ -137,7 +137,7 @@ MonoBehaviour:
   health: 1
   deathEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b,
     type: 2}
-  deathEffectDuration: 0.95
+  deathEffectDuration: 4
 --- !u!136 &136591016356755674
 CapsuleCollider:
   m_ObjectHideFlags: 1
