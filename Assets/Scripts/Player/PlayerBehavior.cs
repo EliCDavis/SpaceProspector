@@ -17,6 +17,8 @@ namespace EliCDavis.Player
 
 		private float pitchSpeed = 75f;
 
+		private int goldLeftToCollect = 3;
+
 		private Rigidbody rb;
 
 		private float maxVelocityChange = 10.0f;
@@ -52,6 +54,12 @@ namespace EliCDavis.Player
 		/// The booster particle effect.
 		/// </summary>
 		private ParticleSystem boosterEffect;
+
+		[SerializeField]
+		private GameObject deathScreen;
+
+		[SerializeField]
+		private GameObject camera;
 
 		// Use this for initialization
 		void Start ()
@@ -133,7 +141,11 @@ namespace EliCDavis.Player
 
 			if (collectable != null) {
 				print ("I just ate: " + collectable.GetCollectableType ().ToString ());
+				goldLeftToCollect--;
 				Destroy (collision.gameObject);
+				if (goldLeftToCollect == 0) {
+					UnityEngine.SceneManagement.SceneManager.LoadScene (2);
+				}
 			} else {
 				rb.AddForce ((transform.forward - collision.collider.transform.position).normalized * -200, ForceMode.Impulse);
 			}
@@ -141,10 +153,18 @@ namespace EliCDavis.Player
 		}
 
 		public void Damage(float amountOfDamage){
-			StartCoroutine (AnimateTakingDamage());
 
 			health = Mathf.Max (0, health - amountOfDamage);
 			healthBar.value = health;
+
+			if (health == 0) {
+				this.camera.transform.parent = null;
+				deathScreen.SetActive (true);
+				Destroy (gameObject);
+			} else {
+				StartCoroutine (AnimateTakingDamage());
+			}
+
 		}
 
 		private IEnumerator AnimateTakingDamage(){

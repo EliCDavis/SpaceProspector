@@ -18,6 +18,11 @@ namespace EliCDavis.Enemy {
 
 		void Update()
 		{
+			if (target == null) {
+				Destroy (this);
+				return;
+			}
+
 			if(Vector3.Distance(target.transform.position, transform.position) < 100){
 				foreach(HornetSpawnerBehavior spawner in spawners){
 					spawner.BeginSpawning (target, 4f);

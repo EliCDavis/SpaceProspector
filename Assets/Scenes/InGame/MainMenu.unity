@@ -305,7 +305,7 @@ ParticleSystem:
   m_GameObject: {fileID: 223932674}
   serializedVersion: 5
   lengthInSec: 5
-  speed: 1
+  simulationSpeed: 1
   looping: 1
   prewarm: 0
   playOnAwake: 1
@@ -3097,7 +3097,7 @@ ParticleSystem:
   m_GameObject: {fileID: 571130358}
   serializedVersion: 5
   lengthInSec: 5
-  speed: 1
+  simulationSpeed: 1
   looping: 1
   prewarm: 0
   playOnAwake: 1
@@ -5759,7 +5759,7 @@ ParticleSystem:
   m_GameObject: {fileID: 624770509}
   serializedVersion: 5
   lengthInSec: 5
-  speed: 1
+  simulationSpeed: 1
   looping: 1
   prewarm: 0
   playOnAwake: 1
@@ -9003,7 +9003,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1415324190}
   serializedVersion: 5
   lengthInSec: 5
-  speed: 1
+  simulationSpeed: 1
   looping: 1
   prewarm: 0
   playOnAwake: 1
@@ -12237,13 +12237,10 @@ MonoBehaviour:
     be worth a lot of money...
 
 
-    Retrieve TEN Golden samples of their food supply
+    Retrieve TEN Golden samples of their food supply by shooting at them.
 
 
-    Also Capture TWO Eggs from their nests spread throughout the asteroid belt.
-
-
-    The parasite on the left is pretty dangerous. Try to avoid.'
+    The parasite on the left is pretty dangerous. Try to avoid by using left-shift.'
 --- !u!222 &1971999233
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12469,7 +12466,7 @@ ParticleSystem:
   m_GameObject: {fileID: 2012603620}
   serializedVersion: 5
   lengthInSec: 5
-  speed: 1
+  simulationSpeed: 1
   looping: 1
   prewarm: 0
   playOnAwake: 1
