@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c3ac7ef7a1bf945a77901dedf2db52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chanceForSpawningOre: 0.5
+  chanceForSpawningOre: 0.374
 --- !u!114 &114240594576764220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c3ac7ef7a1bf945a77901dedf2db52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chanceForSpawningOre: 0.5
+  chanceForSpawningOre: 0.374
 --- !u!114 &114456530910922442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c3ac7ef7a1bf945a77901dedf2db52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chanceForSpawningOre: 0.5
+  chanceForSpawningOre: 0.374
 --- !u!114 &114483502027697540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c3ac7ef7a1bf945a77901dedf2db52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chanceForSpawningOre: 0.5
+  chanceForSpawningOre: 0.374
 --- !u!114 &114525389402789926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c3ac7ef7a1bf945a77901dedf2db52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chanceForSpawningOre: 0
+  chanceForSpawningOre: 0.374
 --- !u!136 &136661566456053502
 CapsuleCollider:
   m_ObjectHideFlags: 1

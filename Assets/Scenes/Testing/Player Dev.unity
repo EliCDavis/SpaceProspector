@@ -187,6 +187,11 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1597205102}
+    - target: {fileID: 114843294985553448, guid: 67867a52d505b844fa94348ef8236bde,
+        type: 2}
+      propertyPath: spawnRate
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 67867a52d505b844fa94348ef8236bde, type: 2}
   m_IsPrefabParent: 0
@@ -290,31 +295,6 @@ Prefab:
     - target: {fileID: 4103896542311326, guid: a76bef68cf62b2c45b045cf9028311c7, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114134990469537412, guid: a76bef68cf62b2c45b045cf9028311c7,
-        type: 2}
-      propertyPath: chanceForSpawningOre
-      value: 0.374
-      objectReference: {fileID: 0}
-    - target: {fileID: 114483502027697540, guid: a76bef68cf62b2c45b045cf9028311c7,
-        type: 2}
-      propertyPath: chanceForSpawningOre
-      value: 0.374
-      objectReference: {fileID: 0}
-    - target: {fileID: 114456530910922442, guid: a76bef68cf62b2c45b045cf9028311c7,
-        type: 2}
-      propertyPath: chanceForSpawningOre
-      value: 0.374
-      objectReference: {fileID: 0}
-    - target: {fileID: 114240594576764220, guid: a76bef68cf62b2c45b045cf9028311c7,
-        type: 2}
-      propertyPath: chanceForSpawningOre
-      value: 0.374
-      objectReference: {fileID: 0}
-    - target: {fileID: 114525389402789926, guid: a76bef68cf62b2c45b045cf9028311c7,
-        type: 2}
-      propertyPath: chanceForSpawningOre
-      value: 0.374
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a76bef68cf62b2c45b045cf9028311c7, type: 2}

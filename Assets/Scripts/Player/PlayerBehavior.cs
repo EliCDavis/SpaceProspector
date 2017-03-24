@@ -118,14 +118,6 @@ namespace EliCDavis.Player
 			brb.AddForce (bulletInstance.transform.forward*100, ForceMode.Impulse);
 		}
 
-
-		void OnTriggerEnter(Collider other) {
-
-
-
-		}
-
-
 		private float CurrentBoostSpeed() {
 			return Input.GetKey (KeyCode.LeftShift)? 2f : 1f;
 		}
@@ -147,7 +139,6 @@ namespace EliCDavis.Player
 			}
 
 		}
-
 
 		public void Damage(float amountOfDamage){
 			StartCoroutine (AnimateTakingDamage());
