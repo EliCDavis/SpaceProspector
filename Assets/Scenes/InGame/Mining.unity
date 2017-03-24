@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 7
   m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogColor: {r: 1, g: 1, b: 1, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -154,6 +154,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &961684196
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4894452848602290, guid: 1f14e2ea4f361fb4fa36208af0f15203, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -6723.8223
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894452848602290, guid: 1f14e2ea4f361fb4fa36208af0f15203, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1917.9357
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894452848602290, guid: 1f14e2ea4f361fb4fa36208af0f15203, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 882.8611
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894452848602290, guid: 1f14e2ea4f361fb4fa36208af0f15203, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894452848602290, guid: 1f14e2ea4f361fb4fa36208af0f15203, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894452848602290, guid: 1f14e2ea4f361fb4fa36208af0f15203, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894452848602290, guid: 1f14e2ea4f361fb4fa36208af0f15203, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894452848602290, guid: 1f14e2ea4f361fb4fa36208af0f15203, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1619578159726120, guid: 1f14e2ea4f361fb4fa36208af0f15203, type: 2}
+      propertyPath: m_Name
+      value: Asteroid
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1f14e2ea4f361fb4fa36208af0f15203, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2115178036
 GameObject:
   m_ObjectHideFlags: 0

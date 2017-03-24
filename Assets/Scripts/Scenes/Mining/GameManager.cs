@@ -11,7 +11,7 @@ namespace EliCDavis.Scenes.Mining {
 		// Use this for initialization
 		void Start () {
 			PlayerFactory.CreatePlayer (Vector3.zero);
-			GenerateAsteroids (10);
+			GenerateAsteroids (20);
 		}
 		
 		// Update is called once per frame
@@ -19,30 +19,34 @@ namespace EliCDavis.Scenes.Mining {
 			
 		}
 
+		private float RandomAngle(){
+			return Random.Range (0f, Mathf.PI * 2);
+		}
 
-		void GenerateAsteroids(int layers) {
+		private void GenerateAsteroids(int layers) {
 
 			for(int layer = 1; layer < layers + 1; layer++){
 
-				int numOfAsteroids = Random.Range (5, 5 + (5 * layer));
+				int numOfAsteroids = Random.Range (25, 25 + (layer * 2 * layer));
 
 				for (int asteroid = 0; asteroid < numOfAsteroids; asteroid++) {
 
-					// http://mathworld.wolfram.com/SpherePointPicking.html
-					float angle = Random.Range (0f, Mathf.PI * 2);
-					float u = Mathf.Cos(angle);
+					bool ore = Random.Range (0f, 1f) > .6f;
 
-					AsteroidFactory.CreateAsteroid (
-						new Vector3(
-							Mathf.Sqrt(1-(u*u))*u,
-							Mathf.Sqrt(1-(u*u))*Mathf.Sin(angle),
-							u
-						)*(layer*500), Quaternion.Euler(
+					GameObject ast = AsteroidFactory.CreateAsteroid (
+						Random.onUnitSphere*(layer*200), 
+						Quaternion.Euler(
 							Random.Range(0, 180),
 							Random.Range(0, 180),
 							Random.Range(0, 180)
-						), true
+						), 
+						ore
 					);
+
+					if (!ore) {
+						ast.GetComponent<Rigidbody> ().AddTorque (Random.onUnitSphere*2000, ForceMode.Impulse);
+					}
+
 				}
 
 			}
