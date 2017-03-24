@@ -31,6 +31,12 @@ namespace EliCDavis.Enemy {
 				spawner.BeginSpawning (target, 1.5f);
 			}
 		}
+
+		private IEnumerator AnimateTakingDamage(){
+			gameObject.GetComponent<MeshRenderer> ().material.color = Color.red;
+			yield return new WaitForSeconds(.2f);
+			gameObject.GetComponent<MeshRenderer> ().material.color = Color.white;
+		}
 	}
 
 }
