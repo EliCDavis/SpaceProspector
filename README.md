@@ -1,10 +1,14 @@
 # Space Prospector
 Game Jam Submission for Dr. TJ's Spring 2017 Game Jam.
 
+![Img1](https://i.imgur.com/DTeDBp1.png)
+
 The theme was **"The Mysteries of Space"**.
 
 ## The Game
 Play as a space miner where you shoot at asteroids to harvest their materials.  Discover new materials along the way!
+
+![Img 2](https://i.imgur.com/4G3G9W5.jpg)
 
 ## 3rd Party Resources Used
 
